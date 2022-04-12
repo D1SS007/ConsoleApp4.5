@@ -17,17 +17,16 @@ namespace ConsoleApp4._5
 
             DrawMassive(ints);
 
-            Shuffle(ref ints);
+            Shuffle(ints);
 
             Console.WriteLine("Массив после тасовки");
 
             DrawMassive(ints);
         }
 
-        static void Shuffle(ref int[] shuffleMassive)
+        static void Shuffle(int[] shuffleMassive)
         {
             Random random = new Random();
-            
             for(int i = shuffleMassive.Length - 1; i >= 1 ; i--)
             {
                 int j = random.Next(0, i + 1);
@@ -43,7 +42,6 @@ namespace ConsoleApp4._5
             {
                 Console.Write(massive[i] + " ");
             }
-            
             Console.WriteLine();
         }
     }
